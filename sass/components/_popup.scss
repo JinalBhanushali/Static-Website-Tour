@@ -1,0 +1,116 @@
+.popup{
+    height:100vh;
+    width:100%;
+    top:0;
+    left:0;
+    background-color:rgba($color-black, .2);
+    position:fixed; 
+    z-index:99999;
+    opacity:0;
+    visibility:hidden;
+    &-box{
+        @include makecenter;
+        width:75%;
+        height:50rem;
+        background-color:$color-white;
+        display:table;
+        box-shadow:0 2rem 4rem rgba($color-black, .9);
+        border-radius:3px;
+        overflow:hidden;
+        transform:translate(-50%,-50%) scale(.5);
+        transition:all .4s .2s;
+    }
+    &:target{
+        opacity:1;
+        visibility:visible;
+    }
+    &:target &-box{
+        transform:translate(-50%,-50%) scale(1);
+    }
+}
+.left{
+   width:33.333333%;
+   display:table-cell;
+
+}
+.img{
+    display:block;
+     width:100%;
+    height:50%;
+}
+.right{
+    margin-top:-2rem;
+width:66.66666%;
+   display:table-cell;
+   vertical-align:middle;
+   padding:0rem 4rem;
+}
+.text1{
+    margin-top:-10rem;
+ 
+}
+.text2{
+    margin-top:-1rem;
+    color:$color-black;
+    padding-bottom:2rem;
+    font-size:2rem;
+}
+.text3{
+    font-weight:400;
+    color:$color-black;
+    font-size:1.6rem;
+    // margin-bottom:2rem;
+    column-count:2;
+    column-gap:4rem;
+    column-rule:1px solid $color-gray-light-2;
+    hyphens:auto;
+}
+
+.text-but{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(75%, 290%);
+      padding-top:2rem;
+  
+          
+          &-last{
+                &:link,
+                &:visited{
+                    text-decoration:none;
+                    background-color:$color-gray-light-2;
+                    border-radius:15px;
+                    color:$color-black;
+                    font-weight:700;
+                    font-size:2rem;
+                    padding:1.2rem;
+                    box-shadow:0 1px 15px rgba($color-black,.4);   
+                }
+                &:hover{
+                        transform: translateY(-100px);
+                        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.8);    
+                } 
+                 &:active{
+                    transform: translateY(0);
+                    box-shadow: 0 7px 20px rgba(0, 0, 0, .2); 
+                }
+                
+            }
+}
+    
+.close{
+    right:4rem;
+    top:2rem;
+    position:absolute;
+    &-icon{
+        &:link,
+        &:visited{
+            font-size:4rem;
+            text-decoration:none;
+        }
+        &:hover,
+        &:active{
+            color:$color-primary;
+        }
+    }
+}

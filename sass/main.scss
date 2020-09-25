@@ -1,0 +1,103 @@
+  @import "abstract/mixins";
+  @import "base/basepage";
+  @import "base/animation";
+  @import "base/typographies";
+  @import "base/utilities";
+  @import "abstract/functions";
+  @import "abstract/variables";
+  @import "pages/home";
+  @import "components/buttons";
+  @import "components/component-box";
+  @import "components/features";
+  @import "components/composition";
+  @import "components/story";
+  @import "components/bg-video";
+  @import "components/footer";
+  @import "components/form-container";
+  @import "components/card";
+  @import "components/popup";
+  @import "layout/header";
+  @import "layout/navigation";
+  @import "layout/grid";
+  body {
+      font-family: "Lota", sans-serif;
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 1.7;
+      color: $color-gray-dark;
+      padding: 30px;
+      
+  }
+  .heading {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      &-primary {
+          color: white;
+          text-transform: uppercase;
+          backface-visibility: hidden;
+          margin-bottom: 60px;
+          &-sub {
+              display: block;
+              font-size: 20px;
+              font-weight: 400;
+              letter-spacing: 15.5px;
+              animation: moveInRight 1s ease-out;
+              @include respond(phone) {
+                    
+                    font-size: 2px;
+                    letter-spacing: 0;
+                }
+               
+                @include respond(tab-port) {
+                    
+                    font-size: 10px;
+                    letter-spacing: 5px;
+                }
+                 @include respond(tab-land) {
+                    
+                    font-size: 16px;
+                    letter-spacing: 10px;
+                }
+                @include respond(big-desktop) {
+                    
+                    font-size: 18px;
+                    letter-spacing: 13px;
+                }
+          }
+          &-main {
+              display: block;
+              font-size: 60px;
+              font-weight: 700;
+              letter-spacing: 35px;
+              animation-name: moveInLeft;
+              animation-duration: 1s;
+              /* animation-delay: 2s;
+                                animation-iteration-count: 3; */
+              animation-timing-function: ease-out;
+            @include respond(phone) {
+                    
+                    font-size: 10px;
+                    letter-spacing: 5px;
+                }
+               
+                @include respond(tab-port) {
+                    
+                    font-size: 20px;
+                    letter-spacing: 20px;
+                }
+                 @include respond(tab-land) {
+                    
+                    font-size: 30px;
+                    letter-spacing: 30px;
+                }
+                @include respond(big-desktop) {
+                    
+                    font-size: 50px;
+                    letter-spacing: 40px;
+                }
+          }
+      }
+  }

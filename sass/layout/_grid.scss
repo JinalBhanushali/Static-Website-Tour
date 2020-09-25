@@ -1,0 +1,70 @@
+.row {
+    max-width: $grid-width;
+    color: white;
+    margin: 0 auto;
+    &:not(:last-child){
+        margin-bottom: $grid-bottom;
+    }
+    @include clearfix;
+}
+    [class^="col-"]{
+        float:left;
+        &:not(:last-child){
+            margin-right: $grid-space;
+        }  
+    }
+//     .col-1-of-2{
+//         width: calc( ( 100% - #{$grid-space} ) / 2);
+//     }
+     .col-1-of-3{
+        width: calc( ( 100% - #{$grid-space}*2 ) / 3);
+       
+     }
+//     .col-2-of-3{
+//         width: calc(  100% - #{$one-of-three} - #{$grid-space} );
+//     }
+    // .col-1-of-4{
+    //     width: calc( ( 100% - #{$grid-space}*3 ) / 4);
+    // }
+//      .col-3-of-4{
+//         width: calc(  100% - #{$grid-space} - #{$one-of-four};
+//     }
+//     .col-2-of-4{
+//         width: calc(  100% - #{$grid-space}*2 - ( ( 100% - #{$grid-space}*3 ) / 4)*2);
+//     }
+.row-1 {
+    max-width: $row-width;
+    margin: 7rem auto;
+    background-color: green;
+}
+
+.text {
+    float: left;
+    margin-right: $grid-space;
+    max-width: calc( ( 100% - #{$grid-space}) / 2);
+    transition: all .2s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.text-heading {
+    font-size: $default-font-size;
+    color: $color-black;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 1rem 1.2rem rgba($color-black, .6);
+}
+
+.text-content {
+    font-size: $default-font-size;
+    color: $color-black;
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.image {
+    float: left;
+    width: calc( ( 100% - #{$grid-space}) / 2);
+}

@@ -1,0 +1,51 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.6), rgba($color-primary-dark, 0.8)), url("../img/img1.jpg");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+    &-logo {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        &-box {
+            height: 160px;
+            &:hover {
+                animation: moveInRight 3s;
+            }
+        }
+    }
+}
+
+.heading-secondary {
+    text-transform: uppercase;
+    margin-right: auto;
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    letter-spacing: 1.5px;
+    margin-bottom:4rem;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s;
+     @include respond(tab-land) {
+            font-size: 95%;
+        }
+        @include respond(tab-port) {
+            font-size: 90%;
+        }
+      
+    &:hover {
+        transform: skewY( -4deg) skewX( 4deg) scale(1.2);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, 0.5);
+    }
+}
+
+.section-tour {
+    margin-top:-10.5rem;
+    padding-top: 25rem;
+    padding-bottom: 1rem;
+    background-color: $color-gray-light-1;
+}

@@ -1,0 +1,59 @@
+.section-box{
+    height:100%;
+}
+.row-component{
+    background-color:transparent;
+    
+}
+
+.col-component {
+    text-align: center;
+    padding-top: 8.5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    transform: skewy(7deg);
+    @include respond(phone){
+    
+        padding-top:25px;
+        
+    }
+   
+}
+.component-box {
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15rem);
+    background-color: rgba(white, .8);
+    border-radius: 4px;
+    text-align: center;
+    margin: 8rem auto;
+    padding: 1rem;
+    
+    max-width: calc( ( 100% - #{$row-2-space}*3) / 4);
+    // max-height: 25rem;
+    float: left;
+    display: inline;
+    transition: transform .4s;
+    @include respond(phone){
+        
+        max-width: 100%;
+        padding:0px;
+        margin:10px;
+    }
+    &-icon {
+        font-size: 4rem;
+    }
+    &-heading {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom:1rem;
+    }
+    &-content {
+        font-size: 1.6rem;
+        font-weight: 400;
+        display: inline;
+    }
+    &:hover {
+        transform: translateY(1.2rem);
+        box-shadow: 0 1rem 1.5rem rgba($color-black, 1.9rem);
+    }
+}

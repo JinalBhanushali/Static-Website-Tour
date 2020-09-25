@@ -1,0 +1,40 @@
+                        @mixin clearfix {
+                            &::after {
+                                content: "";
+                                display: table;
+                                clear: both;
+                            }
+                        }
+                        
+                        @mixin usinghover {
+                            .component-box:hover {
+                                transform: translateY(.4rem);
+                            }
+                        }
+                        
+                        @mixin makecenter {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                      
+                        @mixin respond($breakpoint) {
+                            $bp-phone:"(max-width: 37.5em)";
+                            $bp-tab-port:"(max-width: 56.25em)";
+                            $bp-tab-land:"(max-width: 75em)";
+                            $bp-big-desktop:"(min-width: 112.5em)";
+                            @if $breakpoint == phone {
+                                @media #{$bp-phone} { @content; } //600px
+                            }
+                            @else if $breakpoint == tab-port {
+                                @media #{$bp-tab-port} { @content; } //900px
+                            }
+                            @else if $breakpoint == tab-land {
+                                @media #{$bp-tab-land} { @content; } //1200px
+                            }
+                            @else if $breakpoint == big-desktop {
+                                @media #{$bp-big-desktop} { @content; } //1500px
+                            }
+                        }
+                   

@@ -1,0 +1,102 @@
+.section-about {
+    background-color: $color-gray-light-1;
+    padding: 25rem 0;
+    margin-top: -22vh;
+//   height:150rem;
+    z-index: 4;
+    padding-bottom:33rem;
+    padding-top: 25rem;
+   
+}
+
+.section-element {
+    
+    height: 105vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.4), rgba($color-primary-dark, 0.8)), url("../img/nature1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: -8rem;
+    z-index: 5;
+    transform: skewy(-7deg);
+    // &>* {
+    //     transform: skewy(deg);
+    // }
+}
+.section-padding{
+    padding-top:5rem;
+    padding-rigth:5rem;
+    padding-left:5rem;
+    padding-bottom: 25rem;
+}
+
+// .col-center {
+//     max-width: $row-2-width;
+//     position: absolute;
+// }
+// .row-2 {
+//     max-width: 100rem;
+//     max-height: 0;
+//     margin: 0 auto;
+//     position: relative;
+//     transition: all .2s;
+//     @include clearfix;
+// }
+// [class^="col-box"] {
+//     &:hover {
+//         transform: translateY(-19px) translateX(3px);
+//         box-shadow: 0 1rem 2.9rem rgba($color-black, .9rem);
+//         background-color: transparent;
+//         color: white;
+//     }
+//     margin-top: 21rem;
+//     padding:1.5rem;
+//     float:left;
+//     background-color:rgba($color-gray-light-1,
+//     .7);
+//     max-height: 28rem;
+//     max-width: calc( ( 100% - #{$row-2-space}*3) / 4);
+//     color: $color-black;
+//     border-radius: 4px;
+//     &:not(:last-child) {
+//         margin-right: $row-2-space;
+//     }
+// }
+.feature-box {
+    padding: 7rem;
+    // transform: translateY(-19px) translateX(3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .7rem);
+    background-color: rgba(white, .8);
+    border-radius: 4px;
+    text-align: center;
+    color: green;
+    // &-icon {
+    //     margin-top: -3rem;
+    //     font-size: 4rem;
+    //     transform: skewy(7deg);
+    // }
+    &-heading {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 3.5rem;
+        transform: skewy(7deg);
+    }
+    &-content {
+        font-size: 1.8rem;
+        font-weight: 700;
+        transform: skewy(7deg);
+        
+    }
+    &:hover {
+        background-color: transparent;
+        box-shadow: 0 1rem 0rem rgba($color-black, 0rem);
+        color: transparent;
+        @include usinghover;
+        
+    }
+    &:hover .component-box{
+        // transform: translateY(-7rem);
+        color:white;
+    }
+}
